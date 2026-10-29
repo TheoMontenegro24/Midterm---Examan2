@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shortly · Acortador de enlaces</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <main class="card">
+    <div class="logo" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/>
+        <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/>
+      </svg>
+    </div>
+
+    <h1>Acorta tus enlaces</h1>
+    <p class="sub">Pega una URL larga y obtén un enlace corto listo para compartir.</p>
+
+    <form id="form" novalidate>
+      <div class="field">
+        <input type="text" id="url" placeholder="https://www.example.com/articulos/arquitectura-cloud"
+               autocomplete="off" aria-label="URL original">
+        <button type="submit" id="submit">
+          <span class="btn-text">Acortar</span>
+          <span class="spinner" aria-hidden="true"></span>
+        </button>
+      </div>
+    </form>
+
+    <p id="error" class="error" role="alert" hidden></p>
+
+    <section id="result" class="result" hidden>
+      <span class="label">Tu enlace corto</span>
+      <div class="short-row">
+        <input type="text" id="short" readonly aria-label="Enlace corto">
+        <button id="copy" type="button" class="secondary">Copiar</button>
+      </div>
+      <a id="open" class="open" href="#" target="_blank" rel="noopener">Abrir enlace ↗</a>
+    </section>
+  </main>
+
+  <footer>S3 · EC2 · DynamoDB</footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
